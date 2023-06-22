@@ -1,0 +1,12 @@
+<button onclick="saveImage()">Save Image</button>
+
+<script>
+function saveImage() {
+  var canvas = document.getElementById('resultCanvas');
+  var image = canvas.toDataURL('image/png');
+  var a = document.createElement('a');
+  a.href = image;
+  a.download = 'result.png';
+  a.click();
+}
+</script>
